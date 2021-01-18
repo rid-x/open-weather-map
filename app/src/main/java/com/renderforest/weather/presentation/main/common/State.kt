@@ -1,6 +1,6 @@
 package com.renderforest.weather.presentation.main.common
 
-import com.renderforest.weather.domain.view_model.DayViewModel
+import com.renderforest.weather.presentation.main.weather.DayViewModel
 
 sealed class AbstractState
 

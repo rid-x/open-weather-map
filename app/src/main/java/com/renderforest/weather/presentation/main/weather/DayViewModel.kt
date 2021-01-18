@@ -1,12 +1,22 @@
-package com.renderforest.weather.domain.mapper
+package com.renderforest.weather.presentation.main.weather
 
+import android.os.Parcelable
 import com.renderforest.weather.data.db.entity.DayEntity
 import com.renderforest.weather.data.network.DayDto
-import com.renderforest.weather.domain.view_model.DayViewModel
+import kotlinx.android.parcel.Parcelize
 import java.text.SimpleDateFormat
 import java.util.*
 
-object ViewModelMapper {
+@Parcelize
+data class DayViewModel(
+    val date: String,
+    val dayTemperature: Float,
+    val nightTemperature: Float,
+    val description: String,
+    val iconUrl: String
+) : Parcelable
+
+object DayViewModelMapper {
 
     const val IMAGE_URL_PATTERN = "https://openweathermap.org/img/wn/%s.png"
     const val DATE_PATTERN = "EE, MMM dd"

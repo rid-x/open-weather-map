@@ -3,7 +3,6 @@ package com.renderforest.weather.presentation.main.weather
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.renderforest.weather.domain.WeatherUseCases
 import com.renderforest.weather.presentation.main.common.AbstractState
 import com.renderforest.weather.presentation.main.common.DefaultState
 import com.renderforest.weather.presentation.main.common.ErrorState
@@ -13,6 +12,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
 import org.koin.dsl.module
+import org.openweathermap.domain.usecase.WeatherUseCases
 
 val viewModelModule = module {
     factory { WeatherViewModel(get()) }
@@ -24,7 +24,7 @@ class WeatherViewModel(private val weatherUseCases: WeatherUseCases) : ViewModel
 
     fun getWeeklyWeather(latitude: Double, longitude: Double) {
         viewModelScope.launch {
-            weatherUseCases.getDailyWeatherByGeoData(
+            weatherUseCases.getDailyWeatherByGeoData<List<DayViewModel>>(
                 latitude, longitude
             )
                 .onStart {

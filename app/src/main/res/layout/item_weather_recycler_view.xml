@@ -7,7 +7,7 @@
 
         <variable
             name="dayViewModel"
-            type="com.renderforest.weather.domain.view_model.DayViewModel" />
+            type="com.renderforest.weather.presentation.main.weather.DayViewModel" />
 
         <variable
             name="formatter"

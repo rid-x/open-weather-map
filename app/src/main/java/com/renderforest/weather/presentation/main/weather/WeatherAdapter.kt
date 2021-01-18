@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.renderforest.weather.R
 import com.renderforest.weather.databinding.ItemWeatherRecyclerViewBinding
-import com.renderforest.weather.domain.view_model.DayViewModel
 
 class WeatherAdapter :
     RecyclerView.Adapter<WeatherAdapter.WeatherViewHolder>() {
