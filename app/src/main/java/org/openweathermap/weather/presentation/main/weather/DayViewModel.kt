@@ -1,8 +1,8 @@
-package com.renderforest.weather.presentation.main.weather
+package org.openweathermap.weather.presentation.main.weather
 
 import android.os.Parcelable
-import com.renderforest.weather.data.db.entity.DayEntity
-import com.renderforest.weather.data.network.DayDto
+import org.openweathermap.weather.data.db.entity.DayEntity
+import org.openweathermap.weather.data.network.DayDto
 import kotlinx.android.parcel.Parcelize
 import java.text.SimpleDateFormat
 import java.util.*

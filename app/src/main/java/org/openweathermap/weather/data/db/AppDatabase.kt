@@ -1,11 +1,11 @@
-package com.renderforest.weather.data.db
+package org.openweathermap.weather.data.db
 
 import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.renderforest.weather.data.db.dao.DayDao
-import com.renderforest.weather.data.db.entity.DayEntity
+import org.openweathermap.weather.data.db.dao.DayDao
+import org.openweathermap.weather.data.db.entity.DayEntity
 import org.koin.dsl.module
 
 val dbModule = module {

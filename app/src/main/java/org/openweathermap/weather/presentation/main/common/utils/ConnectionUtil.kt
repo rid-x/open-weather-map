@@ -1,4 +1,4 @@
-package com.renderforest.weather.presentation.main.common.utils
+package org.openweathermap.weather.presentation.main.common.utils
 
 import android.content.Context
 import android.net.ConnectivityManager

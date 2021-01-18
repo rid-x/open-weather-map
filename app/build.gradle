@@ -10,7 +10,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "com.renderforest.weather"
+        applicationId "org.openweathermap.weather"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1

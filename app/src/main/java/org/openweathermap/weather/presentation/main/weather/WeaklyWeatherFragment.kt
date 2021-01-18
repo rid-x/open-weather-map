@@ -1,4 +1,4 @@
-package com.renderforest.weather.presentation.main.weather
+package org.openweathermap.weather.presentation.main.weather
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -24,14 +24,14 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
-import com.renderforest.weather.R
-import com.renderforest.weather.databinding.FragmentWeaklyWeatherBinding
-import com.renderforest.weather.presentation.main.common.DefaultState
-import com.renderforest.weather.presentation.main.common.ErrorState
-import com.renderforest.weather.presentation.main.common.LoadingState
-import com.renderforest.weather.presentation.main.common.utils.ConnectionUtil
+import org.openweathermap.weather.databinding.FragmentWeaklyWeatherBinding
 import kotlinx.android.synthetic.main.fragment_weakly_weather.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.openweathermap.weather.R
+import org.openweathermap.weather.presentation.main.common.DefaultState
+import org.openweathermap.weather.presentation.main.common.ErrorState
+import org.openweathermap.weather.presentation.main.common.LoadingState
+import org.openweathermap.weather.presentation.main.common.utils.ConnectionUtil
 
 
 class WeaklyWeatherFragment : Fragment(), LocationListener {

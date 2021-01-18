@@ -1,12 +1,12 @@
-package com.renderforest.weather.presentation.main.weather
+package org.openweathermap.weather.presentation.main.weather
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.renderforest.weather.presentation.main.common.AbstractState
-import com.renderforest.weather.presentation.main.common.DefaultState
-import com.renderforest.weather.presentation.main.common.ErrorState
-import com.renderforest.weather.presentation.main.common.LoadingState
+import org.openweathermap.weather.presentation.main.common.AbstractState
+import org.openweathermap.weather.presentation.main.common.DefaultState
+import org.openweathermap.weather.presentation.main.common.ErrorState
+import org.openweathermap.weather.presentation.main.common.LoadingState
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onStart

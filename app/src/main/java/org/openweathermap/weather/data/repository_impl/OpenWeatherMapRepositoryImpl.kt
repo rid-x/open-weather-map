@@ -1,14 +1,14 @@
-package com.renderforest.weather.data.repository_impl
+package org.openweathermap.weather.data.repository_impl
 
-import com.renderforest.weather.BuildConfig
-import com.renderforest.weather.data.db.dao.DayDao
-import com.renderforest.weather.data.db.entity.DayEntityMapper
-import com.renderforest.weather.data.network.*
-import com.renderforest.weather.presentation.main.weather.DayViewModelMapper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import org.koin.dsl.module
 import org.openweathermap.domain.repository.OpenWeatherMapRepository
+import org.openweathermap.weather.BuildConfig
+import org.openweathermap.weather.data.db.dao.DayDao
+import org.openweathermap.weather.data.db.entity.DayEntityMapper
+import org.openweathermap.weather.data.network.*
+import org.openweathermap.weather.presentation.main.weather.DayViewModelMapper
 import java.io.IOException
 
 val repositoryModule = module {

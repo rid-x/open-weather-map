@@ -1,6 +1,6 @@
 @file:Suppress("UNUSED_PARAMETER", "unused")
 
-package com.renderforest.weather.data.network
+package org.openweathermap.weather.data.network
 
 import com.google.gson.annotations.SerializedName
 import retrofit2.http.GET

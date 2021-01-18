@@ -1,8 +1,8 @@
-package com.renderforest.weather.presentation
+package org.openweathermap.weather.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.renderforest.weather.R
+import org.openweathermap.weather.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

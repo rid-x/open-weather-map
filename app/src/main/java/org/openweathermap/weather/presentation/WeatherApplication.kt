@@ -1,10 +1,10 @@
-package com.renderforest.weather.presentation
+package org.openweathermap.weather.presentation
 
 import android.app.Application
-import com.renderforest.weather.data.db.dbModule
-import com.renderforest.weather.data.network.di.networkModule
-import com.renderforest.weather.data.repository_impl.repositoryModule
-import com.renderforest.weather.presentation.main.weather.viewModelModule
+import org.openweathermap.weather.data.db.dbModule
+import org.openweathermap.weather.data.network.di.networkModule
+import org.openweathermap.weather.data.repository_impl.repositoryModule
+import org.openweathermap.weather.presentation.main.weather.viewModelModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

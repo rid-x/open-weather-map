@@ -1,6 +1,6 @@
-package com.renderforest.weather.presentation.main.common
+package org.openweathermap.weather.presentation.main.common
 
-import com.renderforest.weather.presentation.main.weather.DayViewModel
+import org.openweathermap.weather.presentation.main.weather.DayViewModel
 
 sealed class AbstractState
 

@@ -1,10 +1,10 @@
-package com.renderforest.weather.data.db.entity
+package org.openweathermap.weather.data.db.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.renderforest.weather.data.network.DayDto
-import com.renderforest.weather.presentation.main.weather.DayViewModelMapper
+import org.openweathermap.weather.data.network.DayDto
+import org.openweathermap.weather.presentation.main.weather.DayViewModelMapper
 import java.text.SimpleDateFormat
 import java.util.*
 

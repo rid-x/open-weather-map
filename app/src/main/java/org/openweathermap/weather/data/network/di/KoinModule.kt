@@ -1,10 +1,10 @@
-package com.renderforest.weather.data.network.di
+package org.openweathermap.weather.data.network.di
 
-import com.renderforest.weather.BuildConfig
-import com.renderforest.weather.data.network.OpenWeatherMapAPIService
+import org.openweathermap.weather.data.network.OpenWeatherMapAPIService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.dsl.module
+import org.openweathermap.weather.BuildConfig
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

@@ -1,12 +1,12 @@
-package com.renderforest.weather.presentation.main.weather
+package org.openweathermap.weather.presentation.main.weather
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.renderforest.weather.R
-import com.renderforest.weather.databinding.ItemWeatherRecyclerViewBinding
+import org.openweathermap.weather.R
+import org.openweathermap.weather.databinding.ItemWeatherRecyclerViewBinding
 
 class WeatherAdapter :
     RecyclerView.Adapter<WeatherAdapter.WeatherViewHolder>() {
