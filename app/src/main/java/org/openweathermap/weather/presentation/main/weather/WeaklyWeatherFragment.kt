@@ -119,7 +119,7 @@ class WeaklyWeatherFragment : Fragment(), LocationListener {
         AlertDialog.Builder(context)
             .setTitle(R.string.no_location)
             .setMessage(R.string.no_location_message)
-            .setPositiveButton(R.string.settings) { paramDialogInterface, paramInt ->
+            .setPositiveButton(R.string.settings) { _, _ ->
                 requireContext().startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
             }
             .setNegativeButton(R.string.close, null)
@@ -155,10 +155,10 @@ class WeaklyWeatherFragment : Fragment(), LocationListener {
         val builder = AlertDialog.Builder(context)
         builder.setTitle(getString(R.string.no_internet_connection))
         builder.setMessage(getString(R.string.no_internet_connection_message))
-        builder.setNegativeButton(getString(R.string.close)) { dialog, which ->
+        builder.setNegativeButton(getString(R.string.close)) { dialog, _ ->
             dialog.dismiss()
         }
-        builder.setPositiveButton(getString(R.string.settings)) { dialog, which ->
+        builder.setPositiveButton(getString(R.string.settings)) { dialog, _ ->
             dialog.dismiss()
             val intent = Intent(Settings.ACTION_WIRELESS_SETTINGS)
             startActivity(intent)
