@@ -1,9 +1,9 @@
 package org.openweathermap.weather.presentation.main.weather
 
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import org.openweathermap.weather.data.db.entity.DayEntity
 import org.openweathermap.weather.data.network.DayDto
-import kotlinx.android.parcel.Parcelize
 import java.text.SimpleDateFormat
 import java.util.*
 

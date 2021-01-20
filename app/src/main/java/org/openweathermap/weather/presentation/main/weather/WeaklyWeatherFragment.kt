@@ -24,10 +24,9 @@ import com.karumi.dexter.MultiplePermissionsReport
 import com.karumi.dexter.PermissionToken
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener
-import org.openweathermap.weather.databinding.FragmentWeaklyWeatherBinding
-import kotlinx.android.synthetic.main.fragment_weakly_weather.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.openweathermap.weather.R
+import org.openweathermap.weather.databinding.FragmentWeaklyWeatherBinding
 import org.openweathermap.weather.presentation.main.common.DefaultState
 import org.openweathermap.weather.presentation.main.common.ErrorState
 import org.openweathermap.weather.presentation.main.common.LoadingState
@@ -40,13 +39,14 @@ class WeaklyWeatherFragment : Fragment(), LocationListener {
     private val weatherAdapter = WeatherAdapter()
     private lateinit var locationManager: LocationManager
     private var location: Location? = null
+    private lateinit var binding: FragmentWeaklyWeatherBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val binding: FragmentWeaklyWeatherBinding = DataBindingUtil
+        binding = DataBindingUtil
             .inflate(inflater, R.layout.fragment_weakly_weather, container, false)
 
         return binding.root
@@ -134,13 +134,13 @@ class WeaklyWeatherFragment : Fragment(), LocationListener {
                         showNoInternetDialog()
                     }
                     weatherAdapter.addItems(it.days)
-                    swipeRefresh.isRefreshing = false
+                    binding.swipeRefresh.isRefreshing = false
                 }
                 is LoadingState -> {
-                    swipeRefresh.isRefreshing = true
+                    binding.swipeRefresh.isRefreshing = true
                 }
                 is ErrorState -> {
-                    swipeRefresh.isRefreshing = false
+                    binding.swipeRefresh.isRefreshing = false
                     Toast.makeText(
                         context,
                         getString(R.string.something_went_wrong),
@@ -169,12 +169,12 @@ class WeaklyWeatherFragment : Fragment(), LocationListener {
 
     private fun initOnClicks() {
 
-        weatherRecyclerView.apply {
+        binding.weatherRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = weatherAdapter
         }
 
-        swipeRefresh.setOnRefreshListener {
+        binding.swipeRefresh.setOnRefreshListener {
             location?.apply {
                 weatherViewModel.getWeeklyWeather(latitude, longitude)
             }
