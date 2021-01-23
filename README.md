@@ -22,8 +22,25 @@ The application uses modern technologies offered by Google and JetBrains. Below 
 - Room
 - Koin
 - Coil
-- Kotlinx Coroutines
+- Kotlin Coroutines
 - Navigation Component
+
+# Privacy Policy
+
+## User Data
+The app does not store personal data anywhere. It only stores the weekly forecast of the user's current location in the local database. 
+
+## Permissions
+
+### Internet
+
+The app uses network to connect forecast data provider.
+
+### Location
+The app uses the user's location to get forecast data from `Open Weather Map` data provider.
+
+### Network & WiFi States
+The app uses network and Wifi status to decide where to get data from: from a local database or from an open weather map.
 
 # License
 ```
