@@ -1,5 +1,7 @@
 # Weekly Forecast
 
+<img src="app_logo.png" width="250" height="250" />
+
 ## About the Project
 The project shows the weekly forecast of the user's current location. Project consists of two modules: the first is the main module that implements the UI and data flows, and the second defines the business logic.
 
