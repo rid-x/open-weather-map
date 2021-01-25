@@ -5,6 +5,10 @@ plugins {
     id 'kotlin-parcelize'
 }
 
+def credentialsPropertiesFile = rootProject.file("credentials.properties")
+def credentialsProperties = new Properties()
+credentialsProperties.load(new FileInputStream(credentialsPropertiesFile))
+
 android {
     compileSdkVersion 29
     buildToolsVersion "30.0.2"
@@ -19,17 +23,27 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file(credentialsProperties['release.storeFile'])
+            storePassword credentialsProperties['release.storePassword']
+            keyAlias credentialsProperties['release.keyAlias']
+            keyPassword credentialsProperties['release.keyPassword']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField "String", "API_URL", "\"https://api.openweathermap.org/\""
-            buildConfigField "String", "API_KEY", "\"25716db72827ed662a5aaa3ea3b1eafc\""
+            buildConfigField "String", "API_URL", credentialsProperties['release.api.url']
+            buildConfigField "String", "API_KEY", credentialsProperties['release.api.key']
+            signingConfig signingConfigs.release
         }
         debug {
             minifyEnabled false
-            buildConfigField "String", "API_URL", "\"https://api.openweathermap.org/\""
-            buildConfigField "String", "API_KEY", "\"25716db72827ed662a5aaa3ea3b1eafc\""
+            buildConfigField "String", "API_URL", credentialsProperties['debug.api.url']
+            buildConfigField "String", "API_KEY", credentialsProperties['debug.api.key']
             debuggable true
         }
     }
