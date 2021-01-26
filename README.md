@@ -7,6 +7,10 @@ The project shows the weekly forecast of the user's current location. Project co
 
 `Note: The forecast data provider is Open Weather Map.`
 
+## Download
+
+<a href="https://play.google.com/store/apps/details?id=io.github.rid.hrant.weather" target="_blank"><img src="download_google_play.png"/></a>
+
 ## Architecture
 
 The project uses two modern and powerful architectural patterns. Below you can find list of them.
