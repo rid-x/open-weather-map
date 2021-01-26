@@ -14,7 +14,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "org.openweathermap.weather"
+        applicationId "io.github.rid.hrant.weather"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
@@ -39,6 +39,7 @@ android {
             buildConfigField "String", "API_URL", credentialsProperties['release.api.url']
             buildConfigField "String", "API_KEY", credentialsProperties['release.api.key']
             signingConfig signingConfigs.release
+            debuggable false
         }
         debug {
             minifyEnabled false

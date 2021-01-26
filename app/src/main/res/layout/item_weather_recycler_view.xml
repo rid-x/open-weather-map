@@ -9,7 +9,7 @@
 
         <variable
             name="dayViewModel"
-            type="org.openweathermap.weather.presentation.main.weather.DayViewModel" />
+            type="io.github.rid.hrant.weather.presentation.main.weather.DayViewModel" />
 
         <variable
             name="formatter"
