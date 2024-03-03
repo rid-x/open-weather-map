@@ -3,24 +3,20 @@
 <img src="app_logo.png" width="250" height="250" />
 
 ## About the Project
-The project shows the weekly forecast of the user's current location. Project consists of two modules: the first is the main module that implements the UI and data flows, and the second defines the business logic.
+The app shows the weekly forecast of the user's current location. Project consists of two modules: the first is the main module that implements the UI and data flows, and the second defines the business logic.
 
-`Note: The forecast data provider is Open Weather Map.`
-
-## Download
-
-<a href="https://play.google.com/store/apps/details?id=io.github.rid.hrant.weather" target="_blank"><img src="download_google_play.png"/></a>
+`Note: The forecast data is provided by Open Weather Map.`
 
 ## Architecture
 
-The project uses two modern and powerful architectural patterns. Below you can find list of them.
+The project uses two modern and powerful architectural patterns. Below you can find the list.
 
 - MVVM
 - Clean Architecture
 
 ## Libraries and Frameworks
 
-The application uses modern technologies offered by Google and JetBrains. Below you can find list of them.
+The application uses modern technologies offered by Google and JetBrains. Below you can find the list.
 
 - Retrofit
 - OkHttp
